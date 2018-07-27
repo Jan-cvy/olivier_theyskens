@@ -21,18 +21,35 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  * @package WordPress
  */
 
+$PROD = FALSE;
+if( $PROD === TRUE ){
+  $DB_NAME = 'ot_website';
+  $DB_USER = 'oliviertheyskens';
+  $DB_PASSWORD = 'Portefoin8';
+  $DB_HOST = 'localhost';
+
+  $WP_HOME = 'http://www.oliviertheyskens.com';
+}else{
+  $DB_NAME = 'oliviertheyskens';
+  $DB_USER = 'root';
+  $DB_PASSWORD = 'tamere';
+  $DB_HOST = 'localhost';
+
+  $WP_HOME = 'http://www.oliviertheyskens.local';
+}
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'oliviertheyskens');
+define('DB_NAME', $DB_NAME);
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', $DB_USER);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'tamere');
+define('DB_PASSWORD', $DB_PASSWORD);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $DB_HOST);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -68,8 +85,8 @@ define('NONCE_SALT',       'FPnG@{Z<bFU2!cFs6o]e0u)vZ=E4h&D|ZStNVP?iHa-EIZQ/{lXj
  */
 $table_prefix  = 'wp_';
 
-define('WP_HOME','http://www.oliviertheyskens.local');
-define('WP_SITEURL','http://www.oliviertheyskens.local');
+define('WP_HOME', $WP_HOME);
+define('WP_SITEURL',$WP_HOME);
 
 /**
  * For developers: WordPress debugging mode.
