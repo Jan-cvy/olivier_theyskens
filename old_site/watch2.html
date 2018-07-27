@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Olivier Theyskens</title>
+
+<link rel="stylesheet" href="css/style2.css" media="all">
+
+<style type="text/css">
+
+body {
+	margin: 0;
+	background: #000;
+}
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+
+#play span.desktop {
+	display: none;
+}
+
+span.mobile {
+    display: block !important;
+}
+
+}
+
+span.mobile {
+    display: none;
+}
+
+
+</style>
+</head>
+
+<body>
+<header>
+
+	<object type="image/svg+xml" data="logo_ot.svg" class="fade-in logo" width="400px">
+			
+					<img alt="click to email olivier theyskens" src="img/logo-test.png" class="fade-in" />
+					
+				</object>
+				
+										
+					
+				
+</header>
+
+
+<video id="video" onclick="playPause()" autoplay muted loop>
+   
+    <source src="otshow_full.mp4" type="video/mp4">
+</video>
+
+
+
+
+<footer>
+<div id="bloc_left"><a href="mailto:info@oliviertheyskens.com">INFO</a></div>
+<div id="bloc_center">
+
+<div id="play">
+<button onclick="playPause()"><span class="desktop">S/S 2017</span><span class="mobile">Play</span></button>
+
+</div>
+
+
+</div>
+<div id="bloc_right"><a href="mailto:press@oliviertheyskens.com">PRESS</a></div>
+</footer>
+
+
+
+
+<script> 
+var myVideo=document.getElementById("video"); 
+
+function playPause()
+{ 
+if (myVideo.paused) 
+  myVideo.play(); 
+else 
+  myVideo.pause(); 
+} 
+
+function makeBig()
+{ 
+myVideo.width=560; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=420; 
+} 
+</script> 
+</body>
+</html>

@@ -1,0 +1,299 @@
+html, body {
+	margin: 0;
+	padding: 0;					
+	height: 100%;					
+	min-width: 200px;
+	font-family: 'engraversgothic_btregular';
+	font-weight: 400;				
+}
+
+a:link, a:visited {
+	color: inherit;
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover, a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+div {
+	height: 100%;	
+	max-width: 100%;				
+	text-align: center;
+	white-space: nowrap;
+}
+
+div:before {						
+  	content: '';					
+  	display: inline-block;
+  	height: 100%;
+  	vertical-align: middle;
+  	margin-right: -0.25em;			
+}
+ 
+img {
+	width: 100%;
+}
+
+section {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+a.svg {
+  position: relative;
+  display: inline-block; 
+}
+a.svg:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+
+
+
+@font-face {
+    font-family: 'engraversgothic_btregular';
+    src: url('engraversgothic-webfont.woff2') format('woff2'),
+         url('engraversgothic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.stopfade { 
+   opacity: .5;
+}
+
+#play { 
+  font-family: 'engraversgothic_btregular';
+  background: #fff;
+  color: #000;
+  padding: 2rem;
+  width: 100px;
+  margin: 0 auto;
+  float: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+
+#play button { 
+  font-family: 'engraversgothic_btregular';
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  border: none; 
+  font-size: 1rem;
+  background: rgba(255,255,255,0.23);
+  color: #000;
+  cursor: pointer;
+  transition: .3s background;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+#play button:hover { 
+   background: #fff;
+}
+
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  
+  padding: .5rem;
+  transition: .6s background; 
+  outline: none;
+  font-family: 'engraversgothic_btregular';
+}
+
+a:hover{
+ 
+  outline: none;
+}
+
+a:active {
+	outline: none;
+}
+
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+	
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	background: #fff;
+	text-align: center;
+}
+
+header img .logo {
+	text-align: center;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	background: #000;
+	text-align:center;
+	bottom: 0;
+}
+
+#bloc_left, #bloc_right, #bloc_center, #bloc_shop {
+	float: left;
+	width: 30%;
+	height: 80px;
+	line-height: 80px;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+#bloc_left {
+	text-align: left;
+	margin-left: 0px;
+}
+
+#bloc_right {
+  width: 10%;
+	text-align: right; 
+}
+
+#bloc_center,
+#bloc_shop {
+	text-align: left;	
+}
+
+.logo {
+	padding: 10px;
+}
+
+/* Important styles */
+#toggle {
+    display: block;
+    width: 26px;
+    height: 30px;
+    margin: 20px auto 20px;
+    float: left;
+    padding-left: 15px;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+#toggle span:after{
+  top: 7px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 0px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* menu appearance*/
+#menu {
+  float: left;
+  position: relative;
+  /*color: #999;*/
+  width: 210px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 0px;
+  background: transparent;
+ 
+  /* just for this demo */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s;
+}
+#menu:after {
+  position: absolute;
+  top: -15px;
+  left: 95px;
+  content: "";
+  display: block;
+ 
+}
+ul, li, li a {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  display: inline-block;
+  padding: 5px;
+  color: #000 !important;
+  text-decoration: none;
+  transition: all .2s;
+  font-size: 12px;
+}
+li a:hover,
+li a:focus {
+  
+  color: #ccc;
+}
