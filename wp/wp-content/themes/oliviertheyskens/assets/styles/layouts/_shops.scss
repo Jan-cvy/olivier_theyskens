@@ -1,27 +1,36 @@
 .shops{
   background-color: black;
   color: white;
-  padding: 0 0 160px;
   text-transform: uppercase;
 
-  .country{
-    margin-bottom: 90px;
-    display: table;
-    width: 100%;
+  @media #{$bp-desktop}{
+    .country{
+      margin-bottom: 90px;
+      display: table;
+      width: 100%;
+    }
+
+    .country_location{
+      display: table-cell;
+      table-layout: fixed;
+      width: 50%;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    .country_shops{
+      display: table-cell;
+      width: 50%;
+    } 
   }
 
-  .country_location{
-    display: table-cell;
-    table-layout: fixed;
-    width: 50%;
-    text-align: right;
-    padding-right: 1%;
-  }
-
-  .country_shops{
-    display: table-cell;
-    width: 50%;
-    padding-left: 1%;
+  @media #{$bp-mobile}{
+    .country_location{
+      margin-bottom: 25px; 
+    }
+    .country_shops{
+      margin-bottom: 50px; 
+    }
   }
 
   & > ul{
@@ -31,6 +40,12 @@
 }
 
 .shop{
+
+  padding: 0 0 160px;
+  @media #{$bp-mobile}{
+    padding: 100px 0;
+    padding-left: 10%;
+  }
 
   a{
     color: white;

@@ -1,6 +1,7 @@
 .header{
 
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1000;
 
   &__burger{
@@ -20,15 +21,18 @@
   &__list{
     
     position: absolute;
-    left: 60px;
-    top: 17px;
+    left: 0;
+    top: 0;
     opacity: 0;
     pointer-events: none;
     transition: all .3s ease;
+    background-color: black;
 
     list-style: none;
     font-size: 0;
     padding: 0;
+    padding-top: 17px;
+    padding-left: 60px;
 
     li{
       display: inline-block;
